@@ -1,0 +1,16 @@
+.grid-container {
+  display: grid;
+  justify-items: center;
+  row-gap: 3rem;
+  padding-block: 5rem;
+}
+
+@media (min-width: 35em) {
+  .grid-container {
+    max-width: 65em;
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: start;
+    align-content: start;
+  }
+}

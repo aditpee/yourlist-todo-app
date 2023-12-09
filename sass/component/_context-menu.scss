@@ -1,0 +1,43 @@
+.context-menu {
+  font-size: 0.875rem;
+  background-color: rgb(33, 33, 33);
+  position: absolute;
+  color: #f43737;
+  width: 8rem;
+  z-index: 9999;
+  box-shadow: 0 0 7px rgb(black, 0.9);
+  translate: 0;
+  transform-origin: top left;
+
+  & > * {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+
+    // for event bubbling
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+  & > *:hover {
+    background-color: rgb(43, 43, 43);
+  }
+  & > .edit {
+    color: #37c7f4;
+  }
+
+  &[aria-hidden="true"] {
+    transform: scale(0);
+  }
+  &[aria-hidden="false"] {
+    transition: transform 300ms;
+  }
+
+  &.overflow {
+    translate: -100%;
+    transform-origin: top right;
+  }
+}

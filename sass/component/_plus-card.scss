@@ -1,0 +1,31 @@
+.plus-todo {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  position: relative;
+
+  & > * {
+    transition: all 300ms;
+  }
+
+  & > input {
+    padding-block: 0.3rem;
+    display: block;
+    outline: 0;
+    max-width: 20rem;
+    justify-self: end;
+    border-bottom: 1px solid var(--black);
+    font-size: var(--fs-300);
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+.plus-todo[aria-expanded="true"] {
+  & > input {
+    transform: scaleX(1);
+  }
+  & > img {
+    transform: rotate(-45deg);
+  }
+}

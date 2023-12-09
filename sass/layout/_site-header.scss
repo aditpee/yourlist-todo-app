@@ -1,0 +1,15 @@
+.site-header {
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  padding: 1.5rem 1rem;
+  gap: 2rem;
+  overflow: hidden;
+
+  & > *:first-child {
+    justify-self: start;
+  }
+  & > *:last-child {
+    justify-self: end;
+  }
+}

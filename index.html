@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div aria-hidden="true" class="context-menu">
+      <div class="delete">
+        <p>delete</p>
+        <img src="./assets/delete.svg" alt="" />
+      </div>
+      <div class="edit">
+        <p>edit</p>
+        <img src="./assets/edit.svg" alt="" />
+      </div>
+    </div>
+    <header class="site-header container">
+      <a href="#" class="logo">YourLists</a>
+      <form action="" class="plus-todo" aria-expanded="false">
+        <input required disabled type="text" />
+        <img class="plus-btn" src="/assets/plus.svg" alt="" />
+      </form>
+      <button hidden id="not-focus"></button>
+    </header>
+    <main id="main-section" class="grid-container">
+      <!-- <article class="card-todo">
+        <h2>Personal Website</h2>
+        <div class="content-wrapper">
+          <div>
+            <button class="check-list"></button>
+            <input type="text" value="Lorem ipsum dolor sit amet." />
+            <p hidden></p>
+          </div>
+          <div>
+            <button class="check-list"></button>
+            <input type="text" value="Lorem ipsum dolor sit amet." />
+          </div>
+          <div>
+            <button class="check-list"></button>
+            <input type="text" disabled value="Lorem ipsum dolor sit amet." />
+          </div>
+          <div>
+            <button class="check-list"></button>
+            <input type="text" disabled value="Lorem ipsum dolor sit amet." />
+          </div>
+          <div>
+            <button>+ Add New Item</button>
+          </div>
+        </div>
+      </article>
+      <article class="card-todo">
+        <h2>Personal Website</h2>
+        <div class="content-wrapper">
+          <div>
+            <button class="check-list"></button>
+            <input type="text" value="Lorem ipsum dolor sit amet." />
+            <p hidden></p>
+          </div>
+          <div>
+            <button class="check-list"></button>
+            <input type="text" value="Lorem ipsum dolor sit amet." />
+          </div>
+          <div>
+            <button class="check-list"></button>
+            <input type="text" disabled value="Lorem ipsum dolor sit amet." />
+          </div>
+          <div>
+            <button class="check-list"></button>
+            <input type="text" disabled value="Lorem ipsum dolor sit amet." />
+          </div>
+          <div>
+            <button>+ Add New Item</button>
+          </div>
+        </div>
+      </article> -->
+    </main>
+
+    <script src="/script/printCards.js"></script>
+    <script src="/script/index.js"></script>
+  </body>
+</html>

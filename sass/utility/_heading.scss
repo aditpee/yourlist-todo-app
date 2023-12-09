@@ -1,0 +1,16 @@
+.heading {
+  font-size: var(--fs-600);
+  font-weight: 400;
+  background-color: hsl(var(--hue), 42%, 69%);
+  background-color: hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 58%, 46%);
+  background-color: hsl(var(--hue), 76%, 73%);
+  word-wrap: break-word;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: background-color 300ms;
+  cursor: pointer;
+}
+.heading:hover {
+  text-decoration: underline;
+}
