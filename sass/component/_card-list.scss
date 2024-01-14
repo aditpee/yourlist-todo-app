@@ -1,14 +1,15 @@
 @use "../abstract/" as *;
 
-.card-todo {
+.card-list {
   box-shadow: 6px 7px rgb(34, 34, 34);
   width: calc(100% - 2rem);
-  overflow: hidden;
+  // overflow: hidden;
   transform-origin: top;
   animation: fade-in 1s cubic-bezier(0, 1.24, 0.3, 1.14);
 }
-.card-todo .content-wrapper {
+.card-list .content-wrapper {
   max-height: 0;
+  overflow: hidden;
   transition: max-height 300ms ease-in-out;
 
   //:last-child = add item

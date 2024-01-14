@@ -97,19 +97,19 @@ img {
     transform: scaleY(100%);
   }
 }
-.card-todo {
+.card-list {
   box-shadow: 6px 7px rgb(34, 34, 34);
   width: calc(100% - 2rem);
-  overflow: hidden;
   transform-origin: top;
   animation: fade-in 1s cubic-bezier(0, 1.24, 0.3, 1.14);
 }
 
-.card-todo .content-wrapper {
+.card-list .content-wrapper {
   max-height: 0;
+  overflow: hidden;
   transition: max-height 300ms ease-in-out;
 }
-.card-todo .content-wrapper > *:not(:last-child) {
+.card-list .content-wrapper > *:not(:last-child) {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-auto-flow: column;
@@ -120,30 +120,30 @@ img {
   padding-block: 1rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
-.card-todo .content-wrapper > *:last-child {
+.card-list .content-wrapper > *:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-block: 2rem;
   background-color: #f5f5f5;
 }
-.card-todo .content-wrapper > *:last-child button {
+.card-list .content-wrapper > *:last-child button {
   font-size: var(--fs-200);
   color: rgb(121, 121, 121);
   width: max-content;
   border-bottom: 1px solid rgb(47, 47, 47);
 }
 
-.plus-todo {
+.form-plus-card {
   display: grid;
   grid-template-columns: 1fr max-content;
   align-items: center;
   position: relative;
 }
-.plus-todo > * {
+.form-plus-card > * {
   transition: all 300ms;
 }
-.plus-todo > input {
+.form-plus-card > input {
   padding-block: 0.3rem;
   display: block;
   outline: 0;
@@ -155,10 +155,10 @@ img {
   transform: scaleX(0);
 }
 
-.plus-todo[aria-expanded=true] > input {
+.form-plus-card[aria-expanded=true] > input {
   transform: scaleX(1);
 }
-.plus-todo[aria-expanded=true] > img {
+.form-plus-card[aria-expanded=true] > img {
   transform: rotate(-45deg);
 }
 
@@ -267,19 +267,16 @@ img {
 .heading {
   font-size: var(--fs-600);
   font-weight: 400;
-  background-color: hsl(var(--hue), 42%, 69%);
-  background-color: hsl(var(--hue), 100%, 30%);
-  background-color: hsl(var(--hue), 58%, 46%);
   background-color: hsl(var(--hue), 76%, 73%);
+  background-color: hsl(var(--hue), 76%, 80%);
   word-wrap: break-word;
   padding: 1rem 2rem;
   text-align: center;
-  transition: background-color 300ms;
   cursor: pointer;
 }
 
 .heading:hover {
-  text-decoration: underline;
+  text-decoration: underline rgba(0, 0, 0, 0.138);
 }
 
 .logo {

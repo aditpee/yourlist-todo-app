@@ -1,4 +1,4 @@
-.plus-todo {
+.form-plus-card {
   display: grid;
   grid-template-columns: 1fr max-content;
   align-items: center;
@@ -21,7 +21,7 @@
   }
 }
 
-.plus-todo[aria-expanded="true"] {
+.form-plus-card[aria-expanded="true"] {
   & > input {
     transform: scaleX(1);
   }
