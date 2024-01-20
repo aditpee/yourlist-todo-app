@@ -39,3 +39,11 @@
     border-bottom: 1px solid rgb(47, 47, 47);
   }
 }
+
+@media (min-width: 35em) {
+  .card-list .content-wrapper {
+    & > *:not(:last-child) {
+      padding: 1.25rem 2rem;
+    }
+  }
+}
