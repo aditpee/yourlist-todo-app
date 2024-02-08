@@ -1,6 +1,7 @@
 .grid-container {
   display: grid;
   justify-items: center;
+  word-break: break-all;
   row-gap: 3rem;
   padding-block: 3rem 5rem;
 }

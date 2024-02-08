@@ -18,12 +18,11 @@ export function handleNewFormList(e) {
   moveHiddenAttribute(newListInput, newListContent);
   setCardHeight(cardContentWrapper);
   newListInput.focus();
-  console.log(changeVariables.forEdit);
+
   changeVariables.forEdit = false;
-  console.log(changeVariables.forEdit);
 
   newListForm.addEventListener("submit", (e) => {
-    submitFormList(e, cardList, newListForm);
+    submitFormList(e, cardList, newListForm).newForm();
   });
   // if focusout, submit form
   newListInput.addEventListener("focusout", () => submitBtn.click());

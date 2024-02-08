@@ -43,7 +43,7 @@ export function handleEdit() {
 
     changeVariables.forEdit = true;
     targetEdit.addEventListener("submit", (e) => {
-      submitFormList(e, cardList, targetEdit);
+      submitFormList(e, cardList, targetEdit).oldForm();
     });
     listInput.addEventListener("focusout", () => submitBtn.click());
   }

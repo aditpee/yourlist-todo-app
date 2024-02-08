@@ -11,7 +11,7 @@ export function handleDelete() {
   const isCardList = targetDelete.classList.contains("card-list");
   const isListForm = targetDelete.classList.contains("list-form");
 
-  const confirmDelete = true; //confirm("sure?");
+  const confirmDelete = confirm("sure?");
   if (confirmDelete == true) {
     if (isCardList) {
       removeElement(targetDelete);
