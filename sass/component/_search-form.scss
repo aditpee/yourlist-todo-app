@@ -1,0 +1,45 @@
+.search-form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: clamp(10rem, 30vw, 20rem);
+  margin-inline: auto;
+  justify-content: center;
+
+  & > .search-btn {
+    margin: auto;
+    margin-block: 0.5rem;
+    background-image: url("../../assets/search.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: clamp(1rem, 3vw, 1.5rem);
+    aspect-ratio: 1;
+  }
+
+  & > input {
+    margin-top: 0.5rem;
+    border-bottom: 1px solid #000000;
+    font-size: var(--fs-300);
+    transform: scaleX(0);
+    transition: transform 300ms;
+    text-align: center;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &.show-input {
+    & > .search-btn {
+      background-image: url("../../assets/plus.svg");
+      transform: scale(1.4) rotate(45deg);
+      img {
+        opacity: 0;
+      }
+    }
+
+    & > input {
+      transform: scaleX(1);
+    }
+  }
+}

@@ -5,11 +5,6 @@ body {
   line-height: 1.5;
 }
 
-.plus-btn {
-  width: 2.5rem;
-  aspect-ratio: 1;
-}
-
 /* css reset */
 *,
 *::after,
@@ -104,6 +99,9 @@ img {
   transform-origin: top;
   animation: fade-in 1s cubic-bezier(0, 1.24, 0.3, 1.14);
 }
+.card-list.hide-card {
+  display: none;
+}
 
 .card-list .content-wrapper {
   max-height: 0;
@@ -161,10 +159,16 @@ img {
   transform: scaleX(0);
 }
 
+.plus-btn {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
 .form-plus-card[aria-expanded=true] > input {
   transform: scaleX(1);
 }
-.form-plus-card[aria-expanded=true] > img {
+.form-plus-card[aria-expanded=true] > .plus-btn {
   transform: rotate(-45deg);
 }
 
@@ -270,6 +274,61 @@ img {
   transform-origin: top right;
 }
 
+.search-form {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: clamp(10rem, 30vw, 20rem);
+  margin-inline: auto;
+  justify-content: center;
+}
+.search-form > .search-btn {
+  margin: auto;
+  margin-block: 0.5rem;
+  background-image: url("../../assets/search.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: clamp(1rem, 3vw, 1.5rem);
+  aspect-ratio: 1;
+}
+.search-form > input {
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #000000;
+  font-size: var(--fs-300);
+  transform: scaleX(0);
+  transition: transform 300ms;
+  text-align: center;
+}
+.search-form > input:focus {
+  outline: 0;
+}
+.search-form.show-input > .search-btn {
+  background-image: url("../../assets/plus.svg");
+  transform: scale(1.4) rotate(45deg);
+}
+.search-form.show-input > .search-btn img {
+  opacity: 0;
+}
+.search-form.show-input > input {
+  transform: scaleX(1);
+}
+
+.text-not-found {
+  font-size: var(--fs-700);
+  font-weight: 400;
+  margin-top: -8rem;
+  display: none;
+}
+.text-not-found.show-not-found {
+  display: block;
+}
+
+@media (min-width: 1000px) {
+  .text-not-found {
+    justify-self: start;
+    grid-column: span 2;
+  }
+}
 .heading {
   font-size: var(--fs-600);
   font-weight: 400;
@@ -303,7 +362,7 @@ img {
   display: grid;
   justify-items: center;
   row-gap: 3rem;
-  padding-block: 5rem;
+  padding-block: 3rem 5rem;
 }
 
 @media (min-width: 640px) {
@@ -331,7 +390,6 @@ img {
   grid-auto-flow: column;
   padding: 1.5rem 1rem;
   gap: 2rem;
-  overflow: hidden;
 }
 .site-header > *:first-child {
   justify-self: start;

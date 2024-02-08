@@ -21,11 +21,17 @@
   }
 }
 
+.plus-btn {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
 .form-plus-card[aria-expanded="true"] {
   & > input {
     transform: scaleX(1);
   }
-  & > img {
+  & > .plus-btn {
     transform: rotate(-45deg);
   }
 }

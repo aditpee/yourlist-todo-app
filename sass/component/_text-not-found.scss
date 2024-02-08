@@ -1,0 +1,17 @@
+.text-not-found {
+  font-size: var(--fs-700);
+  font-weight: 400;
+  margin-top: -8rem;
+  display: none;
+
+  &.show-not-found {
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .text-not-found {
+    justify-self: start;
+    grid-column: span 2;
+  }
+}
